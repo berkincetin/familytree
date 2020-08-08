@@ -35,6 +35,8 @@ var chart = new OrgChart(document.getElementById("js-tree"), {
         { id: 26, pid: 6, name: "Gonul" },
         { id: 27, pid: 6, name: "Ismail" },
 
+        //Family Tree Section for Sitki and Umgusum
+
         { id: 28, pid: 8, name: "Remzi K. Emine" },
         { id: 29, pid: 28, name: "Dilber d.Erdinc" },
         { id: 30, pid: 28, name: "Sitki K. Turkan" },
@@ -50,6 +52,42 @@ var chart = new OrgChart(document.getElementById("js-tree"), {
         { id: 39, pid: 36, name: "Sadik" },
         { id: 40, pid: 37, name: "Safinaz" },
         { id: 41, pid: 37, name: "Gokhan" },
+
+        { id: 42, pid: 8, name: "Ali K. Emine" },
+        { id: 43, pid: 42, name: "Umgusum d. Sinan" },
+        { id: 44, pid: 42, name: "Orhan" },
+        { id: 45, pid: 43, name: "Samra" },
+
+        { id: 46, pid: 8, name: "Beyda d. Eyub" },
+        { id: 47, pid: 46, name: "Gultekin d.Muharam" },
+        { id: 48, pid: 46, name: "Nuriye" },
+
+        //Family Tree section for Ismail and Fatme
+        { id: 49, pid: 9, name: "Gulzade d. Osman" },
+        { id: 50, pid: 9, name: "Gonul d. Viys" },
+        { id: 51, pid: 9, name: "Bedriya d. Selim" },
+        { id: 52, pid: 9, name: "Ismail K. Fatma" },
+
+        { id: 53, pid: 49, name: "Yusuf K. Ummite" },
+        { id: 54, pid: 49, name: "Ayla d. Ferat" },
+        { id: 55, pid: 53, name: "Metahan" },
+        { id: 56, pid: 53, name: "Gulzade" },
+
+        { id: 57, pid: 50, name: "Savdiye d.Hikmat" },
+        { id: 58, pid: 50, name: "Sevim d.Husayin" },
+        { id: 59, pid: 50, name: "Hatice d. Ercan" },
+        { id: 60, pid: 57, name: "Ayse" },
+        { id: 61, pid: 58, name: "Sevil" },
+        { id: 62, pid: 58, name: "Onder" },
+        { id: 63, pid: 59, name: "Nase" },
+
+        { id: 64, pid: 51, name: "Sulman" },
+        { id: 65, pid: 51, name: "Ayse" },
+        { id: 66, pid: 51, name: "Surhan" },
+
+        { id: 67, pid: 52, name: "Sabri" },
+        { id: 68, pid: 52, name: "Rayma" },
+
 
 
 
