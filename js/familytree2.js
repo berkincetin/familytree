@@ -8,7 +8,7 @@ window.onload = function () {
         { id: 6, pid: 2, name: "Ali" },
         { id: 7, pid: 2, name: "Basri" },
 
-        { id: 8, pid: 3, name: "Sitki K. Umgusum" },
+        { id: 8, pid: 3, name: "Sitki K. Umgusum",title:"Sitki" },
         { id: 9, pid: 3, name: "Ismail K. Fatme" },
         { id: 10, pid: 3, name: "Sefika d. Saban" },
         { id: 11, pid: 3, name: "Huseyin K. Fatme" },
@@ -34,30 +34,30 @@ window.onload = function () {
 
         //Family Tree Section for Sitki and Umgusum
 
-        { id: 28, pid: 8, name: "Remzi K. Emine", title: "QA" },
-        { id: 29, pid: 28, name: "Dilber d.Erdinc",title: "QA" },
-        { id: 30, pid: 28, name: "Sitki K. Turkan",title: "QA" },
-        { id: 31, pid: 29, name: "Zerrin",title: "QA" },
-        { id: 32, pid: 29, name: "Berkin",img: "https://cdn.balkan.app/shared/5.jpg" ,title: "QA"},
-        { id: 33, pid: 30, name: "Tolga",title: "QA" },
-        { id: 34, pid: 30, name: "Saleh",title: "QA" },
+        { id: 28, pid: 8, name: "Remzi K. Emine",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597359879/117341050_760890904721895_7929805465123113258_n_it8a66.jpg", title: "Remzi" },
+        { id: 29, pid: 28, name: "Dilber d.Erdinc",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597360156/20200725_102719_yrjsdu.jpg", title: "Remzi" },
+        { id: 30, pid: 28, name: "Sitki K. Turkan",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597360213/117316399_2716680488580046_2015989091147184777_n_fpwkrl.jpg", title: "Remzi" },
+        { id: 31, pid: 29, name: "Zerrin",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597360279/117243874_2349724425330027_7820692614407707157_n_bvao6i.jpg", title: "Remzi" },
+        { id: 32, pid: 29, name: "Berkin",img: "https://res.cloudinary.com/berkindesign/image/upload/v1597355550/Headshot_nued29.jpg" ,title: "Remzi"},
+        { id: 33, pid: 30, name: "Tolga",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597360278/117906026_312135813319119_4915393083690645604_n_re5ebr.jpg", title: "Remzi" },
+        { id: 34, pid: 30, name: "Saleh",img:"https://res.cloudinary.com/berkindesign/image/upload/v1597360277/117643112_327452828303710_4437701396520028938_n_dlikf9.jpg", title: "Remzi" },
 
-        { id: 35, pid: 8, name: "Safinaz d. Mustafa" },
-        { id: 36, pid: 35, name: "Emine d. Aydin" },
-        { id: 37, pid: 35, name: "Ahmet K. Sevgul" },
-        { id: 38, pid: 36, name: "Emel" },
-        { id: 39, pid: 36, name: "Sadik" },
-        { id: 40, pid: 37, name: "Safinaz" },
-        { id: 41, pid: 37, name: "Gokhan" },
+        { id: 35, pid: 8, name: "Safinaz d. Mustafa" ,title: "Safinaz"},
+        { id: 36, pid: 35, name: "Emine d. Aydin" ,title: "Safinaz"},
+        { id: 37, pid: 35, name: "Ahmet K. Sevgul" ,title: "Safinaz"},
+        { id: 38, pid: 36, name: "Emel" ,title: "Safinaz"},
+        { id: 39, pid: 36, name: "Sadik" ,title: "Safinaz"},
+        { id: 40, pid: 37, name: "Safinaz" ,title: "Safinaz"},
+        { id: 41, pid: 37, name: "Gokhan" ,title: "Safinaz"},
 
-        { id: 42, pid: 8, name: "Ali K. Emine" },
-        { id: 43, pid: 42, name: "Umgusum d. Sinan" },
-        { id: 44, pid: 42, name: "Orhan" },
-        { id: 45, pid: 43, name: "Samra" },
+        { id: 42, pid: 8, name: "Ali K. Emine",title:"Ali" },
+        { id: 43, pid: 42, name: "Umgusum d. Sinan",title:"Ali" },
+        { id: 44, pid: 42, name: "Orhan",title:"Ali" },
+        { id: 45, pid: 43, name: "Samra" ,title:"Ali"},
 
-        { id: 46, pid: 8, name: "Beyda d. Eyub" },
-        { id: 47, pid: 46, name: "Gultekin d.Muharam" },
-        { id: 48, pid: 46, name: "Nuriye" },
+        { id: 46, pid: 8, name: "Beyda d. Eyub",title:"Beyda" },
+        { id: 47, pid: 46, name: "Gultekin d.Muharam",title:"Beyda" },
+        { id: 48, pid: 46, name: "Nuriye",title:"Beyda" },
 
         //Family Tree section for Ismail and Fatme
         { id: 49, pid: 9, name: "Gulzade d. Osman" },
@@ -158,13 +158,20 @@ window.onload = function () {
     for (var i = 0; i < nodes.length; i++) {
         var node = nodes[i];
         switch (node.title) {
-            case "QA":
-                node.tags = ["QA"];
+            case "Sitki":
+                node.tags = ["Sitki"];
                 break;
-            case "Marketer":
-            case "Designer":
-            case "Sales Manager":
-                node.tags = ["Marketing"];
+            case "Remzi":
+                node.tags = ["Remzi"];
+                break;
+            case "Safinaz":
+                node.tags = ["Safinaz"];
+                break;            
+            case "Ali":
+                node.tags = ["Ali"];
+                break;
+            case "Beyda":
+                node.tags = ["Beyda"];
                 break;
         }
     }

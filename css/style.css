@@ -117,8 +117,23 @@ right connector from last child*/
 /*NODE COLORS */
 
 /*partial*/
-.node.QA rect {
-    fill: #F57C00;
+.node.Sitki rect {
+    fill: #f57c00;
+
+}
+.node.Remzi rect {
+    fill: #ac5700;
+}
+
+.node.Safinaz rect {
+    fill: #dd7000;
+}
+.node.Ali rect {
+    fill: #f79633;
+}
+
+.node.Beyda rect {
+    fill: #fabe80;
 }
 
 .node.Dev rect {
