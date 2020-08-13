@@ -1,11 +1,5 @@
-
-
-
-var chart = new OrgChart(document.getElementById("js-tree"), {
-    nodeBinding: {
-        field_0: "name"
-    },
-    nodes: [
+window.onload = function () { 
+    var nodes = [
         { id: 1, name: "Sali" },
         { id: 2, pid: 1, name: "Ismail" },
         { id: 3, pid: 2, name: "Sabri" },
@@ -40,13 +34,13 @@ var chart = new OrgChart(document.getElementById("js-tree"), {
 
         //Family Tree Section for Sitki and Umgusum
 
-        { id: 28, pid: 8, name: "Remzi K. Emine" },
-        { id: 29, pid: 28, name: "Dilber d.Erdinc" },
-        { id: 30, pid: 28, name: "Sitki K. Turkan" },
-        { id: 31, pid: 29, name: "Zerrin" },
-        { id: 32, pid: 29, name: "Berkin",img: "https://cdn.balkan.app/shared/5.jpg" },
-        { id: 33, pid: 30, name: "Tolga" },
-        { id: 34, pid: 30, name: "Saleh" },
+        { id: 28, pid: 8, name: "Remzi K. Emine", title: "QA" },
+        { id: 29, pid: 28, name: "Dilber d.Erdinc",title: "QA" },
+        { id: 30, pid: 28, name: "Sitki K. Turkan",title: "QA" },
+        { id: 31, pid: 29, name: "Zerrin",title: "QA" },
+        { id: 32, pid: 29, name: "Berkin",img: "https://cdn.balkan.app/shared/5.jpg" ,title: "QA"},
+        { id: 33, pid: 30, name: "Tolga",title: "QA" },
+        { id: 34, pid: 30, name: "Saleh",title: "QA" },
 
         { id: 35, pid: 8, name: "Safinaz d. Mustafa" },
         { id: 36, pid: 35, name: "Emine d. Aydin" },
@@ -159,6 +153,31 @@ var chart = new OrgChart(document.getElementById("js-tree"), {
 
         { id: 112, pid: 109, name: "Ayse" },
 
-    ]
-    
-});
+    ];
+
+    for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        switch (node.title) {
+            case "QA":
+                node.tags = ["QA"];
+                break;
+            case "Marketer":
+            case "Designer":
+            case "Sales Manager":
+                node.tags = ["Marketing"];
+                break;
+        }
+    }
+
+    var chart = new OrgChart(document.getElementById("js-tree"), {
+        layout: OrgChart.mixed,
+        nodeBinding: {
+            field_0: "name",
+            field_1: "title",
+            img_0: "img"
+        },
+        nodes: nodes
+    });
+};
+
+

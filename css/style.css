@@ -13,7 +13,7 @@ html, body{
     width:100%;
     height:100%;
   }
-  
+
 .tree {
     margin: 0 auto;
 }
@@ -112,4 +112,19 @@ right connector from last child*/
 .tree li a:hover+ul::before, 
 .tree li a:hover+ul ul::before{
 	border-color:  #94a0b4;
+}
+
+/*NODE COLORS */
+
+/*partial*/
+.node.QA rect {
+    fill: #F57C00;
+}
+
+.node.Dev rect {
+    fill: #039BE5;
+}
+
+.node.Marketing rect {
+    fill: #FFCA28;
 }
